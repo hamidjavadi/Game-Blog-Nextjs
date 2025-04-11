@@ -1,7 +1,7 @@
-import Footer from "@/components/footer";
-import Header from "@/components/header";
-import { PropsWithChildren } from "react";
-import "@/styles/globals.css";
+import Footer from '@/components/footer';
+import Header from '@/components/header';
+import { PropsWithChildren } from 'react';
+import '@/styles/globals.css';
 
 const HomePageLayout = ({ children }: PropsWithChildren) => {
   return (
