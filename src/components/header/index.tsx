@@ -1,6 +1,6 @@
-import { PropsWithChildren } from "react";
-import Navbar from "../navbar";
-import styles from "./header.module.css";
+import { PropsWithChildren } from 'react';
+import Navbar from '../navbar';
+import styles from './header.module.css';
 
 const Header = ({ children }: PropsWithChildren) => {
   return (
