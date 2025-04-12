@@ -10,7 +10,8 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "docker:run": "docker compose up",
-    "docker:build": "docker compose build"
+    "docker:build": "docker compose build",
+    "prepare": "husky"
   },
   "dependencies": {
     "next": "15.2.4",
@@ -26,6 +27,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.2.4",
+    "husky": "^9.1.7",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
