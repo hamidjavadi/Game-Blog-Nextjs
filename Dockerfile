@@ -8,11 +8,9 @@ WORKDIR /app
 # Expose the port that the application listens on.
 EXPOSE 3000
 
-# Copy all files into the image
-COPY . .
-
-# Install dependencies
+# Install dependencies only
+COPY package.json yarn.lock ./
 RUN yarn install --frozen-lockfile
 
-# Run the application
-CMD yarn dev
+# Run the application in development mode
+CMD ["yarn", "dev"]
