@@ -35,3 +35,12 @@ if ! npm run lint; then
   exit 1
 fi
 
+echo "\n${BLUE}${DIVIDER}${NC}"
+echo "${BOLD}${YELLOW}${ROCKET} Running Unit Tests ...${NC}"
+
+if ! npm run lint; then
+  echo "\n${BOLD}${RED}${CROSS} Unit Tests Failed!${NC}"
+  echo "${DIM}${RED}Tip: Run ${BOLD}npm run cy:run:ct${NC}${DIM}${RED} to debug.${NC}"
+  echo "${BLUE}${DIVIDER}${NC}\n"
+  exit 1
+fi
