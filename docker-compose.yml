@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3.9'
 
 services:
   server:
@@ -12,6 +12,25 @@ services:
     environment:
       - NODE_ENV=development
     restart: unless-stopped
+    networks:
+      - blog-network
+
+  postgres:
+    image: postgres:latest
+    restart: always
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres_data:/data/db
+    environment:
+      POSTGRES_PASSWORD: 123456
+    networks:
+      - blog-network
+
+networks:
+  blog-network:
+    driver: bridge
 
 volumes:
   node_modules:
+  postgres_data:
